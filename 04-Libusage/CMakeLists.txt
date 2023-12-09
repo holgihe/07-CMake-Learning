@@ -11,6 +11,8 @@ project(libusage)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
+# target_include_directories = where to find/put header files *.h
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/../include )
 # target_link_directories = where to find library files  *.a
 target_link_directories (${PROJECT_NAME}  PUBLIC ${CMAKE_SOURCE_DIR}/../lib/ )
 # target_link_libraries = which libraries *.a or *.so to use for the linker 

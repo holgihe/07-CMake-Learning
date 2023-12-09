@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../include/libdemo.h"
+#include "libdemo.h"
 
 
 int main (int argc, char** argv) {
