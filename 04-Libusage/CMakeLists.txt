@@ -13,7 +13,7 @@ add_executable(${PROJECT_NAME} main.cpp)
 
 # target_link_directories = where to find library files  *.a
 target_link_directories (${PROJECT_NAME}  PUBLIC ${CMAKE_SOURCE_DIR}/../lib/ )
-# target_link_libraries = which libraries *.a or *.so to link 
+# target_link_libraries = which libraries *.a or *.so to use for the linker 
 target_link_libraries(${PROJECT_NAME} libdemo)
 
 install( TARGETS libusage DESTINATION bin )

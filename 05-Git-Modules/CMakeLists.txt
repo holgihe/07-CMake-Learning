@@ -1,3 +1,7 @@
+# firsttime:  to connect to submodule from github via git - example with glfw library
+git submodule add https://github.com/glfw/glfw.git external/glfw
+
+
 # cd builds/03-Libdemo
 # cmake -DCMAKE_BUILD_TYPE=Debug ../../03-Libdemo/
 # make
