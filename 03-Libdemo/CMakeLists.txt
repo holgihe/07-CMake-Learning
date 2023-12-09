@@ -1,5 +1,5 @@
-# cd builds/02-trim
-# cmake -DCMAKE_BUILD_TYPE=Debug ../../02-trim/
+# cd builds/03-Libdemo
+# cmake -DCMAKE_BUILD_TYPE=Debug ../../03-Libdemo/
 # make
 # make install 
 
@@ -11,4 +11,8 @@ project(libdemo)
 
 add_library(${PROJECT_NAME} libdemo.cpp)
 
-install( TARGETS libdemo DESTINATION bin )
+# Set variable PUBLIC_HEADER for libdemo.h file
+set_target_properties(libdemo PROPERTIES PUBLIC_HEADER libdemo.h)
+
+# Now we can install libdemo.a in one directory, and header libdemo.h in another 
+install( TARGETS libdemo LIBRARY DESTINATION lib PUBLIC_HEADER DESTINATION include )
